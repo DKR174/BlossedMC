@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlossedMC - Inicio</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="banner">
+            <h1>BlossedMC</h1>
+            <p class="slogan">¡Vive la mejor experiencia Minecraft!</p>
+            <a href="about.html" class="btn-primary">Conoce más</a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section class="server-info">
+            <h2>Información del Servidor</h2>
+            <ul>
+                <li><strong>IP:</strong> <span class="server-ip">blossed.minehost.pro</span> <button class="copy-btn" onclick="copyIP()">Copiar IP</button></li>
+                <li><strong>Versión:</strong> 1.21.5</li>
+                <li><strong>Modo de juego:</strong> Survival, Eventos, Minijuegos</li>
+                <li><strong>Jugadores en línea:</strong> <span id="online-players">?</span></li>
+            </ul>
+        </section>
+        <section class="features">
+            <h2>¿Por qué elegir BlossedMC?</h2>
+            <div class="features-list">
+                <div class="feature">
+                    <h3>Comunidad Activa</h3>
+                    <p>Únete a cientos de jugadores y haz nuevos amigos cada día.</p>
+                </div>
+                <div class="feature">
+                    <h3>Eventos Únicos</h3>
+                    <p>Participa en eventos semanales y gana recompensas exclusivas.</p>
+                </div>
+                <div class="feature">
+                    <h3>Soporte 24/7</h3>
+                    <p>Nuestro staff está siempre disponible para ayudarte.</p>
+                </div>
+            </div>
+        </section>
+        <section class="join">
+            <h2>¡Únete ahora!</h2>
+            <p>IP del servidor: <span class="server-ip">blossed.minehost.pro</span></p>
+            <a href="https://discord.gg/wxGbbKTkWd" class="btn-secondary" target="_blank">Unirse al Discord</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 BlossedMC. Todos los derechos reservados. Made by DKR.</p>
+    </footer>
+    <script>
+        function copyIP() {
+            const ip = document.querySelector('.server-ip').textContent;
+            navigator.clipboard.writeText(ip);
+            alert('¡IP copiada al portapapeles!');
+        }
+        // Simulación de jugadores en línea
+        document.getElementById('online-players').textContent = Math.floor(Math.random()*100)+1;
+    </script>
+</body>
+</html>
